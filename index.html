@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Log a book!</h2>
+    <div id="book-container"></div>
+    <button id="add-book">Add book</button>
+    <dialog id="book-dialog">
+        <form method="dialog" id="book-form">
+            <h3>Add a book</h3>
+            <label>Title <input name="title" required></label>
+            <label>Author <input name="author" required></label>
+            <label>Pages <input type="number" name="pages" min="1" required></label>
+            <label><input type="checkbox" name="isRead"> Already read</label>
+            <div>
+                <button value="cancel" formnovalidate>Cancel</button>
+                <button value="add" type="submit">Add</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id="delete-dialog">
+        <form method="dialog" id="delete-form">
+            <p id="delete-message">Delete this book?</p>
+            <br>
+            <div>
+            <button type="button" id="cancel-delete">Cancel</button>
+            <button type="submit" id="confirm-delete">Delete</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+</html>
